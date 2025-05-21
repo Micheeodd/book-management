@@ -1,7 +1,7 @@
 #  Application de Gestion de Livres 
 
-##  Objectif?
-Ce projet a été conçu pour mettre en pratique les bases solides du développement Java, en particulier autour de la programmation orientée objet (POO), 
+##  Objectif
+Ce projet a été conçu pour mettre en pratique les bases du développement Java autour de la programmation orientée objet (POO), 
 des tests unitaires et fonctionnels, ainsi que de l'automatisation avec Maven et GitHub Actions. C'est un projet qui couvre des étapes essentielles d’un vrai projet logiciel.
 
 ---
@@ -25,17 +25,19 @@ L'application permet de gérer une petite bibliothèque de livres via des opéra
 ---
 
 ##  Exemple d’utilisation (scénario fonctionnel simulé)
-1. Ajout de “1984” de George Orwell (1949)
-2. Ajout de “Dune” de Frank Herbert (1965)
-3. Suppression de “1984”
-4. Affichage des livres restants
+1.  Ajout de "Et si on arrêtait de se mentir" – Olivier Sibony (2023)
+2.  Ajout de "La vie est une fête" – David Laroche (2022)
+3. Suppression du premier livre
+4. Affichage attendu :
 
-**Sortie attendue :**
+```
+La vie est une fête by David Laroche (2022)
+```
 
 
 ---
 
-## Tests automatisés
+## Tests 
 - **Tests unitaires** (fichier `LibraryTest.java`) : testent chaque fonctionnalité isolément.
 - **Test fonctionnel** (fichier `LibraryFunctionalTest.java`) : simule un scénario utilisateur complet.
 
@@ -43,7 +45,7 @@ L’objectif est de s’assurer que chaque méthode fonctionne comme prévu, dan
 
 ---
 
-##  CI/CD avec GitHub Actions
+##  CI/CD
 Un workflow CI est configuré dans `.github/workflows/maven.yml`. Il permet de :
 
 - Compiler le projet à chaque `push` ou `pull request` sur `main`
@@ -55,6 +57,14 @@ C’est un moyen simple mais puissant de garantir la stabilité du projet à cha
 
 ## ▶️ Comment lancer le projet
 
-### 1. Compilation
+### Compilation & Tests
 ```bash
+# Compiler le projet
 mvn clean compile
+```
+
+# Exécuter les tests
+```bash
+mvn test
+```
+
