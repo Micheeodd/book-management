@@ -59,7 +59,6 @@ C’est un moyen simple mais puissant de garantir la stabilité du projet à cha
 
 ### Compilation & Tests
 ```bash
-# Compiler le projet
 mvn clean compile
 ```
 
